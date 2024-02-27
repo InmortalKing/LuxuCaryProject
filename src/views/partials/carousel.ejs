@@ -1,0 +1,57 @@
+<div id="carouselExampleCrossfade" class="relative">
+  <!-- Carousel items -->
+  <div class="carousel-items relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    <!-- Primera imagen -->
+    <div class="carousel-item relative float-left w-full">
+      <img src="https://www.bmw.com.mx/content/dam/bmw/common/all-models/m-series/m3-sedan/2022/highlights/bmw-3-series-sedan-m-automobiles-sp-desktop.jpg" class="block w-full" alt="WALLPAPER BMW " />
+    </div>
+    <!-- Segunda imagen -->
+    <div class="carousel-item relative float-left hidden w-full">
+      <img src="https://wallpapers.com/images/hd/4k-mercedes-car-2018-0f2otaa9l0gn0xjr.jpg" class="block w-full" alt="MERCEDES BENZ WALLPAPER" />
+    </div>
+    <!-- Tercera imagen -->
+    <div class="carousel-item relative float-left hidden w-full">
+      <img src="https://4kwallpapers.com/images/wallpapers/audi-rs-7-sportback-black-box-richter-2020-5k-8k-2560x1080-2217.jpg" class="block w-full" alt="AUDI WALLPAPER" />
+    </div>
+  </div>
+
+  <!-- Controles del carrusel - anterior -->
+  <button class="carousel-control absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center text-white" type="button" onclick="prevSlide()">
+    <span class="inline-block h-8 w-8 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span class="text-white">Previous</span>
+  </button>
+  <!-- Controles del carrusel - siguiente -->
+  <button class="carousel-control absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center text-white" type="button" onclick="nextSlide()">
+    <span class="inline-block h-8 w-8 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span class="text-white">Next</span>
+  </button>
+</div>
+
+<script>
+  // Variables para el carrusel
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-item');
+  const totalSlides = slides.length;
+
+  // Función para mostrar la diapositiva anterior
+  function prevSlide() {
+    slides[currentSlide].classList.add('hidden');
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    slides[currentSlide].classList.remove('hidden');
+  }
+
+  // Función para mostrar la siguiente diapositiva
+  function nextSlide() {
+    slides[currentSlide].classList.add('hidden');
+    currentSlide = (currentSlide + 1) % totalSlides;
+    slides[currentSlide].classList.remove('hidden');
+  }
+</script>

@@ -15,5 +15,5 @@ import router from './routes/appRoutes.js';
 
     app.set('view engine','ejs');
     console.log(join(__dirname,'public'));
-    
+
     app.listen(3000);
