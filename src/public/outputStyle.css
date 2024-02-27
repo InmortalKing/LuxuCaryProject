@@ -1299,6 +1299,10 @@ video {
     padding: 0.25rem;
   }
 
+  .sm\:p-0 {
+    padding: 0px;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
