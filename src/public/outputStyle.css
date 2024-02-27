@@ -688,6 +688,14 @@ video {
   margin-top: 1rem;
 }
 
+.me-4 {
+  margin-inline-end: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -782,6 +790,10 @@ video {
 
 .max-w-\[90\%\] {
   max-width: 90%;
+}
+
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .shrink-0 {
@@ -1094,6 +1106,11 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1101,6 +1118,12 @@ video {
 .shadow-\[0_2px_15px_-3px_rgba\(0\2c 0\2c 0\2c 0\.07\)\2c 0_10px_20px_-2px_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
   --tw-shadow: 0 2px 15px -3px rgba(0,0,0,0.07),0 10px 20px -2px rgba(0,0,0,0.04);
   --tw-shadow-colored: 0 2px 15px -3px var(--tw-shadow-color), 0 10px 20px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1186,6 +1209,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1260,6 +1287,10 @@ video {
     margin-left: 0.25rem;
   }
 
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
   .sm\:w-full {
     width: 100%;
   }
@@ -1287,12 +1318,24 @@ video {
     margin-left: 3.5rem;
   }
 
+  .md\:me-6 {
+    margin-inline-end: 1.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
 
   .md\:w-6\/12 {
     width: 50%;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:p-14 {
@@ -1370,6 +1413,11 @@ video {
 
   .dark\:bg-\[hsla\(0\2c 0\%\2c 5\%\2c 0\.7\)\] {
     background-color: hsla(0,0%,5%,0.7);
+  }
+
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
 
   .dark\:text-blue-500 {
