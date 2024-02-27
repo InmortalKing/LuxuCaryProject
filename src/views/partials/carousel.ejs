@@ -40,6 +40,7 @@
   let currentSlide = 0;
   const slides = document.querySelectorAll('.carousel-item');
   const totalSlides = slides.length;
+  let slideInterval;
 
   // Función para mostrar la diapositiva anterior
   function prevSlide() {
@@ -54,4 +55,19 @@
     currentSlide = (currentSlide + 1) % totalSlides;
     slides[currentSlide].classList.remove('hidden');
   }
+
+  // Función para desplazar automáticamente las diapositivas
+  function autoSlide() {
+    nextSlide();
+  }
+
+  // Iniciar el intervalo para desplazar automáticamente las diapositivas cada 3 segundos
+  slideInterval = setInterval(autoSlide, 7000);
+
+  // Detener el intervalo cuando se hace clic en los botones de control
+  document.querySelectorAll('.carousel-control').forEach(button => {
+    button.addEventListener('click', () => {
+      clearInterval(slideInterval);
+    });
+  });
 </script>
